@@ -1,0 +1,63 @@
+@import "./variables";
+
+@mixin FontRegular($color) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin FontMedium($color) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  color: $color;
+}
+
+@mixin FontSemiBold($color) {
+  font-family: $font-family;
+  font-style: normal;
+  color: $color;
+  font-weight: 600;
+}
+@mixin FontBold($color) {
+  font-family: $font-family;
+  font-style: normal;
+  color: $color;
+  font-weight: 700;
+}
+
+
+@mixin mobileScreen {
+  @media (max-width: #{$mobile}) {
+      @content;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@mixin tabletScreen {
+  @media (min-width: #{$tablet}) {
+      @content;
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@mixin ipadScreens {
+  @media (min-width:#{$ipad}) {
+      @content;
+  }
+}
+
+/* Big screen devices (889px and above) */
+@mixin laptopScreen {
+  @media (min-width: #{$laptop}) {
+      @content;
+  }
+}
+
+/* Extra big screen devices (1200px and above) */
+@mixin largeScreen {
+  @media (min-width: #{$desktop}) {
+      @content;
+  }
+}

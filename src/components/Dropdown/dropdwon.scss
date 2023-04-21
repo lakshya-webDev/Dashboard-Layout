@@ -1,0 +1,22 @@
+@import "../../scss/app.scss";
+.dropdownMenu {
+    position: absolute;
+    background: $white-color;
+    right: 0;
+    top: 1rem;
+    width: 120px;
+    color: $black-color;
+    padding: 1rem;
+    margin-top: 10px;
+    z-index: 1;
+    box-shadow: 2px 2px 15px;
+
+    .menuList {
+        .menuItem {
+            @include FontMedium($black-color);
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            cursor: pointer;
+        }
+    }
+}

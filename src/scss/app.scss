@@ -1,0 +1,49 @@
+@import "./variables";
+@import "./mixins.scss";
+@import "./general";
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /* use the following only if you are able to scroll past the image to see a white area (this is the <body> peeking out) above or below the image */
+}
+
+body {
+ @include FontRegular($black-color);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+
+  /* Standard syntax */
+}
+
+a{
+  text-decoration: none;
+  color:unset;
+}
+
+#root{
+  height: auto;
+}
+.ml-auto {
+  margin-left: auto
+}

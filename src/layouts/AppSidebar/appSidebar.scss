@@ -1,0 +1,85 @@
+@import "../../scss/app.scss";
+
+.sidebar-wrapper {
+  padding: 1rem;
+  min-height: 100vh;
+  width: 14rem;
+  background: $primaryColor;
+  border-right: 1px solid $black-color;
+
+  .sidebar-listing {
+    .sidebar-item {
+      color: $white-color;
+      padding: 0.5rem 0;
+      position: relative;
+
+      .nav-link {
+        display: flex;
+        gap: 1rem;
+
+        .link {
+          &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $white-color;
+            transition: width 0.3s;
+          }
+
+          &:hover::after {
+            width: 100%;
+            //transition: width .3s;
+          }
+        }
+      }
+
+      .icon {
+        svg {
+          vertical-align: bottom;
+        }
+      }
+
+      svg,
+      .link {
+        font-size: 1.2rem;
+      }
+
+      .subItem-listing {
+        position: relative;
+        left: 0;
+        z-index: 1;
+        top: 0;
+        padding: 1rem 2rem;
+
+        .sub-item {
+          margin-bottom: 0.5rem;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+          text-decoration: none;
+
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          .nav-link{
+            .link {
+              &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background: $white-color;
+                transition: width 0.3s;
+              }
+  
+              &:hover::after {
+                width: 100%;
+                //transition: width .3s;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

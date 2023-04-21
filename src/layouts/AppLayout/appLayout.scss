@@ -1,0 +1,15 @@
+@import "../../scss/app.scss";
+.app-main-wrapper{
+    height:calc(100% - 100px);
+    display: flex;
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+}
+.app-footer{
+    background-color: $black-color
+}

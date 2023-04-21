@@ -1,0 +1,23 @@
+ dependencies
+/node_modules
+/UIServer/node_modules
+/UIServer/build
+package-lock.json
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+*.deploysecret.config
+UIServer/.vscode/launch.json
+UIServer/.vscode/settings.json

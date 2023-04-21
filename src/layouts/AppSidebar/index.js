@@ -10,12 +10,14 @@ const AppSidebar = () => {
       <div className="sidebar-listing">
         {AppData.Sidebar.length > 0 &&
           AppData.Sidebar.map((val, i) => (
-            <div className="sidebar-item">
+            <div className="sidebar-item" key={i}>
               <Link to={val.url} key={i} className="nav-link">
                 <div className="icon">{val.icon}</div>
                 <div className="link">{val.name}</div>
                 {val?.subCategory?.length > 0 &&
-                  <div className="drop-icon" style={{ transform: toggle && `rotate(180deg)`, transition: '.3ms ease-in-out' }} onClick={() => setToggle(!toggle)}>
+                  <div className="drop-icon" style={{
+                    transform: toggle ? `rotate(180deg)` : `rotate(0deg)`, transition: 'transform .1s linear'
+                  }} onClick={() => setToggle(!toggle)}>
                   <MdOutlineKeyboardArrowDown/></div>}
               </Link>
               {toggle &&

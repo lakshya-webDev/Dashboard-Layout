@@ -2,12 +2,14 @@
 
 .sidebar-wrapper {
   padding: 1rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   width: 14rem;
   background: $primaryColor;
   border-right: 1px solid $black-color;
 
   .sidebar-listing {
+    position: relative;
+      height: 100%;
     .sidebar-item {
       color: $white-color;
       padding: 0.5rem 0;
@@ -80,6 +82,10 @@
           }
         }
       }
+                                                                                                &:nth-last-child(1) {
+                                                                                                  position: absolute;
+                                                                                                  bottom: 1rem;
+                                                                                                }
     }
   }
 }

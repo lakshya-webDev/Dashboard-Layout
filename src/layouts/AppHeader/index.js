@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { AppImages } from "../../appData/appImages";
 import "./appHeader.scss";
 import { AppData } from "../../appData/appData";
-import Dropdown from "../../components/Dropdown";
+import ProfileMenu from "../../components/ProfileMenu";
 const AppHeader = (props) => {
   const { sidebarWidth } = props
+  console.log(sidebarWidth)
   const [toggle, setToggle] = useState(false)
   return (
     <div className="app-header">
@@ -12,13 +13,13 @@ const AppHeader = (props) => {
       </div>
       <div className="right-menu ml-auto">
         {AppData?.Header?.length > 0 && AppData?.Header?.map((val, i) => (
-          <>
-            <div className="profile-item" key={i} onClick={() => setToggle(!toggle)}>
+          <React.Fragment key={i}>
+            <div className="profile-item" onClick={() => setToggle(!toggle)}>
               <div className="icon">{val.icon}</div>
               <div className="nav-link">{val.name}</div>
-              {toggle && <Dropdown data={val.subMenu} />}
+              {toggle && <ProfileMenu data={val.subMenu} style={{ top: '3.5rem' }} />}
             </div>
-          </>
+          </React.Fragment>
 
         ))}
       </div>

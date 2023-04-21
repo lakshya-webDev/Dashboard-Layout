@@ -7,7 +7,9 @@ import {
   MdLogout
 } from "react-icons/md";
 import { AppImages } from "./appImages";
+
 export const AppData = {
+
   Sidebar: [
     {
       icon: <MdHome />,
@@ -20,11 +22,11 @@ export const AppData = {
       subCategory: [
         {
           name: "Cards",
-          url: "/components/cards"
+          url: "/component/cards"
         },
         {
           name: "Buttons",
-          url: "/components/buttons"
+          url: "/component/buttons"
         }
       ]
     },
@@ -37,19 +39,22 @@ export const AppData = {
       icon: <MdOutlineTableRows />,
       name: "Data Table",
       url: "/data-table"
-    }
+    },
+    {
+      icon: <MdSettingsSuggest />,
+      name: 'Settings',
+      url: '/settings'
+
+    },
   ],
   Header:[{
-    icon: <MdSettingsSuggest/>,
-    name: 'Profile',
+    icon: <img src={AppImages.ProfilePlaceholder} className="profile" />,
+    name: 'Admin',
     subMenu: [
-      {
-        icon: <img src={AppImages.ProfilePlaceholder} />,
-        name: 'Settings'
-      },
+
       {
         icon: <MdLogout />,
-        name: 'Logout'
+        name: 'Logout',
       }
     ]
   },

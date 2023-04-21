@@ -1,15 +1,29 @@
 @import "../../scss/app.scss";
-.app-main-wrapper{
-    height:calc(100% - 100px);
+.app-main-wrapper {
+    height: calc(100% - 100px);
     display: flex;
-    .content-wrapper{
+    width: 100%;
+    
+        .content-wrapper {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
         padding: 1rem;
-    }
-}
-.app-footer{
-    background-color: $black-color
-}
+        position: relative;
+        
+            .content {
+                flex: 1 0 auto;
+            }
+                .app-footer {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: $primaryColor;
+                    color: $white-color;
+                    text-align: center;
+                    padding: 1rem 0;
+                    flex-shrink: 0;
+                }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                                }

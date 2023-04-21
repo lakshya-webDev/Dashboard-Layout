@@ -43,14 +43,29 @@
                                     color: $white-color;
                                     display: flex;
                                     align-items: center;
-                                    width: 100%;
+                                    width: 70%;
                                     justify-content: flex-end;
                                     .profile-item {
                                         cursor: pointer;
                                         display: flex;
+                                        align-items: center;
                                         position: relative;
                                         gap: 0.5rem;
                                         width: 120px;
+                                        font-size: 1.2rem;
+                                        
+                                            .icon {
+                                                height: 40px;
+                                                width: 40px;
+                                                border-radius: 50%;
+                                                overflow: hidden;
+                                        
+                                                img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
                                         }
                                 }
                 }

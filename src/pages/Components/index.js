@@ -1,15 +1,13 @@
 import React from 'react'
 import { AppComponent } from '../../appData/appComponent'
 
-const Calendar = (props) => {
-    const { title } = props
+const Components = (props) => {
+    const { children } = props
     return (
         <AppComponent.AppLayout appHeader={true} appFooter={true} appSidebar={true} >
-            <div className={`${title}`}>
-                <h1>{title}</h1>
-            </div>
+            {children}
         </AppComponent.AppLayout>
     )
 }
 
-export default Calendar
+export default Components

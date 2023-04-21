@@ -1,5 +1,6 @@
 @import "../../scss/app.scss";
-.dropdownMenu {
+
+.profileMenu {
     position: absolute;
     background: $white-color;
     right: 0;
@@ -7,9 +8,11 @@
     width: 120px;
     color: $black-color;
     padding: 1rem;
-    margin-top: 10px;
     z-index: 1;
-    box-shadow: 2px 2px 15px;
+    background-clip: padding-box;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+    border-radius: .35rem;
+    border: 1px solid $greyColor;
 
     .menuList {
         .menuItem {

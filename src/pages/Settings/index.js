@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppComponent } from '../../appData/appComponent'
 
-const Calendar = (props) => {
+const Settings = (props) => {
     const { title } = props
     return (
         <AppComponent.AppLayout appHeader={true} appFooter={true} appSidebar={true} >
@@ -12,4 +12,4 @@ const Calendar = (props) => {
     )
 }
 
-export default Calendar
+export default Settings

@@ -1,13 +1,13 @@
 import React from "react";
-import { AppComponet } from "../../appData/appComponent";
+import { AppComponent } from "../../appData/appComponent";
 const Dashboard = (props) => {
   const { title } = props
   return (
-    <AppComponet.AppLayout appHeader={true} appFooter={true} appSiidebar={true} >
+    <AppComponent.AppLayout appHeader={true} appFooter={true} appSidebar={true} >
       <div className={`${title}`}>
         <h1>{title}</h1>
       </div>
-    </AppComponet.AppLayout>
+    </AppComponent.AppLayout>
   );
 };
 export default Dashboard;
